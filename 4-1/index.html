@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>sample</title>
 </head>
 <body>
@@ -12,6 +13,12 @@
         <button @click="decrement">-1</button>
         <br>
         <p>{{ count }}</p>
+        <p v-if="count>=80"
+            class="passed">ランクA</p>
+            <p v-else-if="count>=60"
+               >ランクB</p>
+                <p v-else
+                    >ランクC</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./script/script.js"></script>

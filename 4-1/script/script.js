@@ -1,9 +1,10 @@
 // JavaScript用ファイル
+
 new Vue({
     el: '#app',
     data() {
         return {
-            count: 1
+            count: 59
         };
     },
     methods: {
@@ -12,6 +13,11 @@ new Vue({
         },
         decrement() {
             this.count --;
+        }
+    },
+    computed:{
+        isPass(){
+            return this.count>=60;
         }
     }
 });
